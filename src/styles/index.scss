@@ -1,0 +1,112 @@
+$primary: #333333;
+$secondary: #eeeeee;
+
+$page-margin: 2rem;
+
+:root {
+  @media screen and (max-width: 768px) {
+    font-size: 12px;
+  }
+
+}
+
+body {
+  font-family: 'Roboto';
+  font-size: 16;
+  margin: 0;
+  color: $primary;
+  background-color: $secondary;
+}
+
+.page {
+  margin: $page-margin;
+  box-sizing: border-box;
+}
+
+.navbar {
+  display: flex;
+  position: absolute;
+  top: $page-margin;
+  left: 0;
+  right: 0;
+  justify-content: center;
+
+  &__container {
+    display: flex;
+    width: 100%;
+    max-width: 500px;
+    justify-content: space-evenly;
+  }
+
+  &__item {
+    font-weight: 500;
+    font-size: 1.5rem;
+    color: $primary;
+    text-decoration: none;
+
+    &--underlined {
+      text-decoration: underline;
+    }
+  }
+}
+
+// Homepage
+
+.home {
+  .hero {
+    width: 100%;
+    height: calc(100vh - (#{$page-margin} * 2));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  
+  
+    &__header {
+      &__container {
+        width: fit-content;
+        position: relative;
+      }
+  
+      &__text {
+        display: block;
+        font-weight: bold;
+        font-size: 6rem;
+        margin: 0;
+        
+        &--hack {
+          position: relative;
+          font-family: 'Source Code Pro';
+          background-color: $primary;
+          color: $secondary;
+          margin-top: -0.35rem;
+        }
+      }
+    }
+  
+  .hack {
+    display: block;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+    &__subheader {
+      font-weight: bold;
+      font-size: 2rem;
+      margin-block: 1rem;
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  .contact-bar {
+    .contact-bar__item {
+      width: 3rem;
+      height: 3rem;
+      margin-inline: 0.5rem;
+    }
+  }
+}
